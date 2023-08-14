@@ -96,7 +96,7 @@ const obtenerUsuarios = async (req,res)=>{
 const autenticarUsuario = async (req,res)=>{
 
 	const {dni,password} = req.body;
-
+	console.log("ESTE ES EL NÚMERO DE DNI : ");
 
 	const existeUsuario = await Usuario.findOne({dni});
 
