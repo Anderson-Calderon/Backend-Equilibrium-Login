@@ -12,7 +12,7 @@ app.use(express.json());
 
 dotenv.config();
 
-const whiteList = [process.env.FRONT_URL];
+const whiteList = [process.env.FRONT_URL,"http://localhost:5173"];
 
 const corsOptions = {
 
