@@ -38,14 +38,17 @@ app.use(cors(corsOptions));
 
 
 conectarDB();
+const PORT = process.env.PORT || 4000;
 
 app.use("/api/reservas",reservaRouter);
 app.use("/api/usuarios",usuarioRouter);
 app.use("/api/areas",areaRouter);
 
-const PORT = process.env.PORT || 4000;
+
 app.listen(PORT,()=>{
 
 	console.log("CORRIENDO EL SERVIDOR",PORT);
 
 })
+
+//ACÁ HACE LOS CAMBIOS 
