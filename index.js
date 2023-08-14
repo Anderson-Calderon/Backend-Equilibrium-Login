@@ -12,7 +12,7 @@ app.use(express.json());
 
 dotenv.config();
 
-const whiteList = [process.env.FRONT_URL,"http://localhost:5173"];
+const whiteList = [process.env.FRONT_URL,"http://localhost:5173","https://equilibriumalternativas.pe"];
 
 const corsOptions = {
 
