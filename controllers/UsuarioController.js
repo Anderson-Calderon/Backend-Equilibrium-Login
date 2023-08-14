@@ -99,7 +99,9 @@ const autenticarUsuario = async (req,res)=>{
 	console.log("ESTE ES EL NÚMERO DE DNI : ",dni,dni.length);
 
 	const existeUsuario = await Usuario.findOne({dni});
+	const usuarios = await Usuario.find();
 
+	console.log(usuarios);
 	
 
 		if(!existeUsuario){
