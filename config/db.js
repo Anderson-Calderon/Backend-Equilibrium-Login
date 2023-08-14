@@ -17,7 +17,7 @@ const conectarDB = async ()=>{
 	}catch(error){
 		console.log("ERROR :");
 		console.log(error);
-		process.exit();
+		process.exit(1);
 
 	}
 
@@ -26,3 +26,5 @@ const conectarDB = async ()=>{
 
 
 export default conectarDB;
+
+//acá se HACEN LOS CAMBIOS
