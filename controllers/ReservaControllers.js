@@ -121,6 +121,15 @@ const eliminarReserva = async (req,res)=>{
 
 	const reserva =  await Reserva.findById(idReserva);
 
+	const urlCaptura = reserva.captura,
+		  partesUrlCaptura = urlCaptura.split("/"),
+		   idCaptura = partesUrlCaptura[partesUrlCaptura.length - 1].split(".")[0];
+		 
+
+		await cloudinary.uploader.destroy(idCaptura);
+
+	
+
 	try{
 
 			await reserva.deleteOne();

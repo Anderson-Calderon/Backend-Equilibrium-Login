@@ -5,9 +5,11 @@ import axios from 'axios';
 import {darFechaHoyFormateada} from '../helpers/Usuario.js';
 
 
+import {enviarMensaje} from '../helpers/MensajeWSP.js';
+
 const registrar = async (req,res)=>{
 
-	console.log("HOLA");
+	
 	const {nombre,apellido,area,dni} = req.body;
 
 
@@ -43,7 +45,7 @@ const registrar = async (req,res)=>{
 	
 			const nuevoUsuario = await  usuario.save();
 
-
+			//await enviarMensaje();
 
 
 		res.json(
@@ -230,7 +232,7 @@ const eliminarUsuario = async (req,res)=>{
 
 	try{
 
-		await Usuario.deleteOne();
+		await usuarioExiste.deleteOne();
 
 		res.json({"msg":"Usuario eliminado Correctamente"})
 
