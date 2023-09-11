@@ -13,7 +13,7 @@ app.use(express.json());
 dotenv.config();
 
 //"https://gorgeous-gaufre-b88cad.netlify.app"
-const whiteList = [process.env.FRONT_URL,"http://localhost:5173","https://equilibriumalternativas.pe"];
+const whiteList = [process.env.FRONT_URL,"http://localhost:5173","https://equilibriumalternativas.pe","https://equilibrium-reservas.netlify.app"];
 
 const corsOptions = {
 
