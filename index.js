@@ -12,7 +12,7 @@ app.use(express.json());
 
 dotenv.config();
 
-const whiteList = [process.env.FRONT_URL,"http://localhost:5173","https://equilibriumalternativas.pe"];
+const whiteList = [process.env.FRONT_URL,"http://localhost:5173","https://equilibriumalternativas.pe","https://vocal-narwhal-88dba8.netlify.app"];
 
 const corsOptions = {
 
