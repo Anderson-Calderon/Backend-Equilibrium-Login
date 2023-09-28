@@ -102,8 +102,8 @@ const obtenerReservas = async (req,res)=>{
    
 
 
-
-	const reservas = await Reserva.find({fecha:{ $gte:fechaHoyFormateada}});
+	//{fecha:{ $gte:fechaHoyFormateada}}
+	const reservas = await Reserva.find();
 
 	console.log(reservas);
 
