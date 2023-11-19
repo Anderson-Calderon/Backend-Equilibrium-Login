@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import usuarioRouter from './routes/UsuarioRoutes.js';
 import reservaRouter from './routes/ReservaRoutes.js';
 import areaRouter from './routes/AreaRoutes.js';
+import servicioRouter from './routes/ServicioRoutes.js';
 import cors from 'cors';
 
 const app = express();
@@ -44,6 +45,7 @@ const PORT = process.env.PORT || 4000;
 app.use("/api/reservas",reservaRouter);
 app.use("/api/usuarios",usuarioRouter);
 app.use("/api/areas",areaRouter);
+app.use("/api/servicios",servicioRouter);
 
 
 app.listen(PORT,()=>{

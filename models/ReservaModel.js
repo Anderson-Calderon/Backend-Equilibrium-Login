@@ -44,6 +44,14 @@ const ReservaSchema = mongoose.Schema({
 				trim:true
 
 			},
+
+	fechaSinFormato:{
+
+				type:Date,
+				required:true,
+				trim:true
+
+	},		
 	hora:{
 
 
@@ -58,7 +66,28 @@ const ReservaSchema = mongoose.Schema({
 		required:true,
 		trim:true
 
-	}
+	},
+	aceptada:{
+
+		type:Boolean,
+		default:false,
+		required:true,
+		trim:true
+
+
+	},
+	precio:{
+
+		type:Number,
+		required:true,
+		min:0
+
+	},
+
+	creador: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: "Usuario",
+	  },
 
 },
 
