@@ -258,7 +258,7 @@ const eliminarReserva = async (req,res)=>{
 
 const obtenerNumeroDeReservasPorFecha = async (req,res)=>{
 
-;
+
 
 	Reserva.aggregate([
 
