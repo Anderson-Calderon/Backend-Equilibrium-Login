@@ -258,14 +258,17 @@ const eliminarReserva = async (req,res)=>{
 
 const obtenerNumeroDeReservasPorFecha = async (req,res)=>{
 
-	
 
+	let fechaHoy = new Date();
+
+	// Restar 1 día a la fecha actual
+	fechaHoy.setDate(miFecha.getDate() - 1);
 	Reserva.aggregate([
 
 
 		{
 			$match: {
-			  fechaSinFormato: { $gte: new Date() }  // Filtra las fechas mayores o iguales a la fecha actual
+			  fechaSinFormato: { $gte: fechaHoy }  // Filtra las fechas mayores o iguales a la fecha actual
 			}
 		  },
 		{
