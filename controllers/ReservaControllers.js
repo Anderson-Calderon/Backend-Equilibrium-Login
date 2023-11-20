@@ -263,6 +263,8 @@ const obtenerNumeroDeReservasPorFecha = async (req,res)=>{
 
 	// Restar 1 día a la fecha actual
 	fechaHoy.setDate(miFecha.getDate() - 1);
+
+	console.log(fechaHoy);
 	Reserva.aggregate([
 
 
